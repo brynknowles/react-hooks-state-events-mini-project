@@ -5,7 +5,7 @@ function NewTaskForm() {
     <form className="new-task-form">
       <label>
         Details
-        <input type="text" name="text" />
+        <input type="text" name="text" onChange={event => console.log(event.target.value)}/>
       </label>
       <label>
         Category
