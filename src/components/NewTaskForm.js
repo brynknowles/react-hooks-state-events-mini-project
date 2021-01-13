@@ -1,11 +1,16 @@
 import React from "react";
 
 function NewTaskForm() {
+
+  function handleChange(event) {
+    console.log(event.target.value)
+  }
+
   return (
     <form className="new-task-form">
       <label>
         Details
-        <input type="text" name="text" onChange={event => console.log(event.target.value)}/>
+        <input type="text" name="text" onChange={handleChange}/>
       </label>
       <label>
         Category
