@@ -6,8 +6,13 @@ function NewTaskForm() {
     console.log(event.target.value)
   }
 
+  function handleSubmit(event) {
+    event.preventDefault()
+    console.log("form submit")
+  }
+
   return (
-    <form className="new-task-form">
+    <form className="new-task-form" onSubmit={handleSubmit}>
       <label>
         Details
         <input type="text" name="text" onChange={handleChange}/>
